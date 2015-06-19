@@ -1,0 +1,124 @@
+<html>
+<head>
+  <title>JavaScript No.1</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+// ここにプログラムを書く
+
+//JavaScriptの手
+function jyankens_a(){
+  //ジャンケンの手を定義
+  var jyanken = ["グー", "チョキ", "パー"]
+  //ランダムにジャンケンの手を返す
+  return (jyanken[Math.floor(Math.random() * 3)])
+}
+
+
+//ジャンケンの定義
+function match(kekka_b){
+
+    var kekka_a = jyankens_a()
+
+    //入力された手のHTML出力
+    var newnode = document.createTextNode("JavaScript：" + kekka_a + "　あなた：" + kekka_b)
+    var kekka = document.getElementById("kekka")
+    kekka.appendChild(newnode);
+    kekka.appendChild(document.createElement("br"));
+
+    //JavaScriptとあなたの手を表示
+    console.log("JavaScript：" + kekka_a + "　あなた：" + kekka_b)
+
+    //勝敗の表示
+    if (kekka_a == kekka_b){
+      console.log("　引き分け")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　引き分け")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+    else if (kekka_a == "グー" && kekka_b == "チョキ"){
+      console.log("　− 勝負 = JavaScriptの勝ち")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　− 勝負 = JavaScriptの勝ち")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+    else if(kekka_a == "グー" && kekka_b == "パー"){
+      console.log("　− 勝負 = あなたの勝ち")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　− 勝負 = あなたの勝ち")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+    else if(kekka_a == "チョキ" && kekka_b == "グー"){
+      console.log("　− 勝負 = あなたの勝ち")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　− 勝負 = あなたの勝ち")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+    else if(kekka_a == "チョキ" && kekka_b == "パー"){
+      console.log("　− 勝負 = JavaScriptの勝ち")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　− 勝負 = JavaScriptの勝ち")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+    else if(kekka_a == "パー" && kekka_b == "グー"){
+      console.log("　− 勝負 = JavaScriptの勝ち")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　− 勝負 = JavaScriptの勝ち")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+    else if(kekka_a == "パー" && kekka_b == "チョキ"){
+      console.log("　− 勝負 = あなたの勝ち")
+      //勝敗のHTML出力
+      var newnode = document.createTextNode("　− 勝負 = あなたの勝ち")
+      var kekka = document.getElementById("kekka")
+      kekka.appendChild(newnode);
+      kekka.appendChild(document.createElement("br"));
+    }
+}
+
+
+</script>
+
+<!-- あなたの手を入力するボタン-->
+<button type="" id="goo_botton">グー</button>
+<button type="" id="tyoki_botton">チョキ</button>
+<button type="" id="pa_botton">パー</button>
+
+<!-- ここに入力した手が表示 -->
+<div id="kekka">
+
+</div>
+
+
+<!-- あなたの入力した手の取得 -->
+<script>
+  var goo =document.getElementById("goo_botton");
+  var tyoki =document.getElementById("tyoki_botton");
+  var pa =document.getElementById("pa_botton");
+  goo.addEventListener("click", function() {match("グー");}, false);
+  tyoki.addEventListener("click", function() {match("チョキ");}, false);
+  pa.addEventListener("click", function() {match("パー");}, false);
+</script>
+
+
+
+
+</body>
+</html>
