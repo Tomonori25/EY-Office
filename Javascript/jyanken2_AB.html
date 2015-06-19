@@ -11,7 +11,7 @@
 function jyankens_a(){
   //ジャンケンの手を定義
   var jyanken = ["グー", "チョキ", "パー"]
-  //ランダムにジャンケンの手をコンソールへ表示
+  //ランダムにジャンケンの手を返す
   return (jyanken[Math.floor(Math.random() * 3)])
 }
 
@@ -19,13 +19,9 @@ function jyankens_a(){
 function jyankens_b(){
   //ジャンケンの手を定義
   var jyanken = ["グー", "チョキ", "パー"]
-  //ランダムにジャンケンの手をコンソールへ表示
+  //ランダムにジャンケンの手を返す
   return (jyanken[Math.floor(Math.random() * 3)])
 }
-
-//AさんとBさんの手を表示
-// jyankens_a()
-// jyankens_b()
 
 
 //ジャンケンする
@@ -35,30 +31,31 @@ function match(){
     var kekka_a = jyankens_a()
     var kekka_b = jyankens_b()
 
-  console.log("Aさん： " + kekka_a)
-  console.log("Bさん： " + kekka_b)
+  //AさんとBさんの手を表示
+    console.log("Aさん： " + kekka_a)
+    console.log("Bさん： " + kekka_b)
 
-  if (kekka_a == kekka_b){
-    console.log("引き分け")
-  }
-  else if (kekka_a == "グー" && kekka_b == "チョキ"){
-    console.log(" 勝敗 = Aさんの勝ち")
-  }
-  else if(kekka_a == "グー" && kekka_b == "パー"){
-    console.log(" 勝敗 = Bさんの勝ち")
-  }
-  else if(kekka_a == "チョキ" && kekka_b == "グー"){
-    console.log(" 勝敗 = Bさんの勝ち")
-  }
-  else if(kekka_a == "チョキ" && kekka_b == "パー"){
-    console.log(" 勝敗 = Aさんの勝ち")
-  }
-  else if(kekka_a == "パー" && kekka_b == "グー"){
-    console.log(" 勝敗 = Aさんの勝ち")
-  }
-  else if(kekka_a == "パー" && kekka_b == "チョキ"){
-    console.log(" 勝敗 = Bさんの勝ち")
-  }
+    if (kekka_a == kekka_b){
+      console.log("引き分け")
+    }
+    else if (kekka_a == "グー" && kekka_b == "チョキ"){
+      console.log(" 勝敗 = Aさんの勝ち")
+    }
+    else if(kekka_a == "グー" && kekka_b == "パー"){
+      console.log(" 勝敗 = Bさんの勝ち")
+    }
+    else if(kekka_a == "チョキ" && kekka_b == "グー"){
+      console.log(" 勝敗 = Bさんの勝ち")
+    }
+    else if(kekka_a == "チョキ" && kekka_b == "パー"){
+      console.log(" 勝敗 = Aさんの勝ち")
+    }
+    else if(kekka_a == "パー" && kekka_b == "グー"){
+      console.log(" 勝敗 = Aさんの勝ち")
+    }
+    else if(kekka_a == "パー" && kekka_b == "チョキ"){
+      console.log(" 勝敗 = Bさんの勝ち")
+    }
   }
 }
 
