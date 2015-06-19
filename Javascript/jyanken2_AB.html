@@ -24,41 +24,43 @@ function jyankens_b(){
 }
 
 
-//ジャンケンする
+//ジャンケンの定義
 function match(){
   // 10回実行する
   for (i = 0; i < 10; i++) {
     var kekka_a = jyankens_a()
     var kekka_b = jyankens_b()
 
-  //AさんとBさんの手を表示
+    //AさんとBさんの手を表示
     console.log("Aさん： " + kekka_a)
     console.log("Bさん： " + kekka_b)
 
+    //勝敗の表示
     if (kekka_a == kekka_b){
-      console.log("引き分け")
+      console.log("　引き分け")
     }
     else if (kekka_a == "グー" && kekka_b == "チョキ"){
-      console.log(" 勝敗 = Aさんの勝ち")
+      console.log("　勝敗 = Aさんの勝ち")
     }
     else if(kekka_a == "グー" && kekka_b == "パー"){
-      console.log(" 勝敗 = Bさんの勝ち")
+      console.log("　勝敗 = Bさんの勝ち")
     }
     else if(kekka_a == "チョキ" && kekka_b == "グー"){
-      console.log(" 勝敗 = Bさんの勝ち")
+      console.log("　勝敗 = Bさんの勝ち")
     }
     else if(kekka_a == "チョキ" && kekka_b == "パー"){
-      console.log(" 勝敗 = Aさんの勝ち")
+      console.log("　勝敗 = Aさんの勝ち")
     }
     else if(kekka_a == "パー" && kekka_b == "グー"){
-      console.log(" 勝敗 = Aさんの勝ち")
+      console.log("　勝敗 = Aさんの勝ち")
     }
     else if(kekka_a == "パー" && kekka_b == "チョキ"){
-      console.log(" 勝敗 = Bさんの勝ち")
+      console.log("　勝敗 = Bさんの勝ち")
     }
   }
 }
 
+//ジャンケンの実行
 match()
 
 </script>
